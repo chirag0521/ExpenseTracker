@@ -1,0 +1,262 @@
+:root {
+  /* Pastel Stationery Color Palette */
+  --color-bg: #FBF7F2;
+  --color-card: #FFFDF9;
+  --color-border: #EDE4D8;
+  --color-border-subtle: #F3ECE2;
+  
+  --color-text-main: #4A423B;
+  --color-text-secondary: #8A7F74;
+  --color-text-muted: #A89F95;
+  
+  /* Primary & Accent Pastels */
+  --color-sage: #A8C3A0;
+  --color-sage-dark: #4F7347;
+  --color-sage-bg: #EFF5ED;
+  --color-sage-border: #C9DEC4;
+  
+  --color-peach: #F4C7AB;
+  --color-peach-dark: #82431C;
+  --color-peach-bg: #FDF0E7;
+  
+  --color-butter: #F6E3A1;
+  --color-butter-dark: #786111;
+  --color-butter-bg: #FCF8E5;
+  --color-butter-border: #E8D385;
+  
+  --color-lavender: #CFC5E8;
+  --color-lavender-dark: #4A3E73;
+  --color-lavender-bg: #F2EEFA;
+  
+  --color-powder: #BBD5E8;
+  --color-powder-dark: #1E4663;
+  --color-powder-bg: #EEF5FA;
+  
+  --color-blush: #F2C4CE;
+  --color-blush-dark: #7E2638;
+  --color-blush-bg: #FCEEF1;
+  
+  /* Negative / Expenses (Soft terracotta / dusty rose - no bright red) */
+  --color-dusty-rose: #C7736D;
+  --color-dusty-rose-bg: #FDF2F0;
+  --color-dusty-rose-border: #EABCB8;
+  --color-dusty-rose-dark: #8A3732;
+
+  /* Typography */
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Geometry & Radii */
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --radius-pill: 9999px;
+  --radius-input: 10px;
+  
+  /* Tap Targets */
+  --min-tap-target: 44px;
+  
+  /* Subtle paper shadow */
+  --shadow-subtle: 0 2px 10px rgba(74, 66, 59, 0.04);
+  --shadow-float: 0 4px 16px rgba(74, 66, 59, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular figures for all financial amounts */
+.num, .amount, .tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* App Outer Shell: Optimized for 360px - 430px mobile screens */
+#root {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background-color: #EFE9E0; /* Desktop canvas background */
+}
+
+.mobile-viewport {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 30px rgba(74, 66, 59, 0.08);
+}
+
+@media (max-width: 440px) {
+  #root {
+    background-color: var(--color-bg);
+  }
+  .mobile-viewport {
+    box-shadow: none;
+  }
+}
+
+/* Content Container with room for bottom navigation */
+.page-content {
+  flex: 1;
+  padding: 18px 18px 90px 18px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Soft paper notebook card */
+.paper-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Paper dashed divider */
+.paper-divider {
+  border: none;
+  border-top: 1px dashed var(--color-border);
+  margin: 16px 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  height: var(--min-tap-target);
+  padding: 0 16px;
+  border-radius: var(--radius-btn);
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: var(--color-border-subtle);
+  color: var(--color-text-main);
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--color-sage);
+  border-color: var(--color-sage-border);
+  color: #294023;
+}
+
+.btn-secondary {
+  background-color: var(--color-card);
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+}
+
+.btn-danger {
+  background-color: var(--color-dusty-rose-bg);
+  border-color: var(--color-dusty-rose-border);
+  color: var(--color-dusty-rose-dark);
+}
+
+.btn-icon {
+  width: var(--min-tap-target);
+  height: var(--min-tap-target);
+  padding: 0;
+  border-radius: var(--radius-btn);
+}
+
+/* Bottom Sheet / Modal backdrop */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(74, 66, 59, 0.45);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 180ms ease;
+}
+
+.bottom-sheet {
+  width: 100%;
+  max-width: 430px;
+  background-color: var(--color-card);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: 1px solid var(--color-border);
+  padding: 20px 20px calc(24px + env(safe-area-inset-bottom)) 20px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 -4px 20px rgba(74, 66, 59, 0.12);
+  animation: slideUp 200ms ease;
+}
+
+.sheet-drag-handle {
+  width: 36px;
+  height: 4px;
+  background-color: var(--color-border);
+  border-radius: 2px;
+  margin: 0 auto 16px auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Inputs & Forms */
+.input-field {
+  width: 100%;
+  height: var(--min-tap-target);
+  background-color: #FAF6EF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-input);
+  padding: 0 14px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-text-main);
+  outline: none;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.input-field:focus {
+  border-color: var(--color-sage);
+  background-color: #FFFFFF;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}

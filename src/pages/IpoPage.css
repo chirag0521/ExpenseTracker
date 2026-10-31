@@ -1,0 +1,223 @@
+.ipo-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ipo-header {
+  margin-bottom: 2px;
+}
+
+.ipo-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.ipo-sub {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* 3 Stat Cards in a row */
+.ipo-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.ipo-stat-card {
+  padding: 12px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ipo-stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.ipo-stat-val {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-main);
+  white-space: nowrap;
+}
+
+.stat-profit {
+  color: var(--color-sage-dark);
+}
+
+.stat-loss {
+  color: var(--color-dusty-rose-dark);
+}
+
+/* IPO Form */
+.ipo-form-section {
+  padding: 16px;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 14px;
+}
+
+.ipo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.profit-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.sign-toggle-group {
+  display: flex;
+  gap: 4px;
+  background-color: var(--color-border-subtle);
+  border-radius: var(--radius-btn);
+  padding: 2px;
+}
+
+.btn-sign {
+  border: none;
+  background: none;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: all 150ms ease;
+}
+
+.btn-sign.active-profit {
+  background-color: var(--color-sage-bg);
+  color: var(--color-sage-dark);
+  border: 1px solid var(--color-sage-border);
+}
+
+.btn-sign.active-loss {
+  background-color: var(--color-dusty-rose-bg);
+  color: var(--color-dusty-rose-dark);
+  border: 1px solid var(--color-dusty-rose-border);
+}
+
+.profit-text {
+  color: var(--color-sage-dark);
+}
+
+.loss-text {
+  color: var(--color-dusty-rose-dark);
+}
+
+.ipo-error-msg {
+  font-size: 12px;
+  color: var(--color-dusty-rose-dark);
+  margin-top: 4px;
+}
+
+.ipo-submit-btn {
+  width: 100%;
+  margin-top: 4px;
+  height: 48px;
+}
+
+/* Entries List */
+.ipo-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ipo-entries-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ipo-entry-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.ipo-entry-card:active {
+  transform: scale(0.98);
+}
+
+.ipo-entry-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ipo-company-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-text-main);
+}
+
+.ipo-entry-date {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.ipo-entry-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.ipo-entry-profit {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.profit-gain {
+  color: var(--color-sage-dark);
+}
+
+.profit-loss {
+  color: var(--color-dusty-rose-dark);
+}
+
+.ipo-tap-hint {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.ipo-empty-card {
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.empty-sub {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}

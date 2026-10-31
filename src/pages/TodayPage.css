@@ -1,0 +1,362 @@
+.today-page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home Header */
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.brand-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-badge {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-main);
+  letter-spacing: -0.01em;
+}
+
+.brand-date {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.header-settings-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-btn);
+}
+
+/* Wallet Hero Section */
+.wallet-hero {
+  padding: 20px 18px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.wallet-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.target-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--color-border-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.target-pill-btn:active {
+  background-color: var(--color-border);
+}
+
+/* Large Balance Typography */
+.wallet-amount-display {
+  font-family: var(--font-serif);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 6px 0 12px 0;
+  transition: color 200ms ease;
+}
+
+/* Color states */
+.wallet-amount-display.sage {
+  color: var(--color-sage-dark);
+}
+
+.wallet-amount-display.butter {
+  color: var(--color-butter-dark);
+}
+
+.wallet-amount-display.rose {
+  color: var(--color-dusty-rose-dark);
+}
+
+/* Soft Progress Bar */
+.wallet-progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background-color: #EDE4D8;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.wallet-progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 300ms ease, background-color 200ms ease;
+}
+
+.wallet-progress-bar-fill.sage {
+  background-color: var(--color-sage);
+}
+
+.wallet-progress-bar-fill.butter {
+  background-color: var(--color-butter);
+}
+
+.wallet-progress-bar-fill.rose {
+  background-color: var(--color-dusty-rose);
+}
+
+/* Metrics line */
+.wallet-month-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background-color: #FAF6EF;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.metric-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.metric-label {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.metric-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.metric-profit {
+  color: var(--color-sage-dark);
+}
+
+.metric-loss {
+  color: var(--color-dusty-rose-dark);
+}
+
+.metric-divider {
+  color: var(--color-border);
+  font-size: 12px;
+}
+
+/* Hero Action Buttons */
+.wallet-hero-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.wallet-action-btn {
+  flex: 1;
+}
+
+/* Safe Spend Strip */
+.safe-spend-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  background-color: var(--color-sage-bg);
+  border-color: var(--color-sage-border);
+}
+
+.safe-spend-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.safe-spend-icon {
+  color: var(--color-sage-dark);
+  flex-shrink: 0;
+}
+
+.safe-spend-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.safe-spend-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-sage-dark);
+}
+
+.safe-spend-sub {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.safe-spend-amount {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-sage-dark);
+}
+
+.safe-spend-empty {
+  background-color: var(--color-dusty-rose-bg);
+  border-color: var(--color-dusty-rose-border);
+}
+
+.safe-spend-empty .safe-spend-title {
+  color: var(--color-dusty-rose-dark);
+}
+
+/* Daily Expenses Section */
+.daily-expenses-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.date-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+}
+
+.date-nav-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-btn);
+  transition: background-color 150ms ease;
+}
+
+.date-nav-btn:active {
+  background-color: var(--color-border-subtle);
+}
+
+.date-nav-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.date-nav-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text-main);
+}
+
+.date-nav-total {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.date-nav-total strong {
+  color: var(--color-text-main);
+}
+
+/* Expenses List */
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expense-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+
+.expense-card:active {
+  transform: scale(0.98);
+}
+
+.expense-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.expense-note {
+  font-size: 13px;
+  color: var(--color-text-main);
+  padding-left: 2px;
+}
+
+.expense-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.expense-amount {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.expense-hint {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+/* Empty Card */
+.expenses-empty-card {
+  padding: 28px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-message {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.empty-add-btn {
+  height: 40px;
+}

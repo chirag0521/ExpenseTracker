@@ -1,0 +1,141 @@
+.spending-bar-chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.bar-chart-legend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  padding: 0 4px;
+}
+
+.legend-hint {
+  font-style: italic;
+}
+
+.legend-max {
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+.bar-chart-scroll-area {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 8px 4px 6px 4px;
+  scrollbar-width: thin;
+}
+
+.bar-chart-track {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  min-width: max-content;
+  padding-bottom: 2px;
+}
+
+.bar-day-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 0 2px 0;
+  transition: background-color 150ms ease, transform 150ms ease;
+  user-select: none;
+}
+
+.bar-day-column:active {
+  transform: scale(0.95);
+}
+
+.bar-day-column:hover {
+  background-color: var(--color-border-subtle);
+}
+
+.bar-day-column.is-selected {
+  background-color: var(--color-peach-bg);
+}
+
+.bar-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.bar-fill {
+  width: 10px;
+  border-radius: 5px;
+  background-color: var(--color-sage);
+  border: 1px solid var(--color-sage-border);
+  transition: height 250ms ease, background-color 180ms ease;
+  position: relative;
+}
+
+.bar-fill.bar-high {
+  background-color: var(--color-peach);
+  border-color: #E8B99D;
+}
+
+.bar-val-tooltip {
+  display: none;
+}
+
+.bar-empty-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-border);
+  margin-bottom: 4px;
+}
+
+.bar-day-label {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-number {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.bar-day-column.is-today .day-number {
+  background-color: var(--color-sage);
+  color: #243E1F;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2px 3px;
+}
+
+.bar-chart-empty {
+  padding: 24px 16px;
+  text-align: center;
+  background-color: var(--color-border-subtle);
+  border-radius: var(--radius-card);
+  border: 1px dashed var(--color-border);
+}
+
+.bar-empty-title {
+  font-size: 14px;
+  color: var(--color-text-main);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.bar-empty-hint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}

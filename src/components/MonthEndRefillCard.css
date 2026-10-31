@@ -1,0 +1,53 @@
+.refill-card {
+  background-color: var(--color-butter-bg);
+  border: 1px solid var(--color-butter-border);
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.refill-icon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #FFFDF9;
+  border: 1px solid var(--color-butter-border);
+  border-radius: var(--radius-pill);
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-butter-dark);
+  align-self: flex-start;
+}
+
+.refill-text {
+  font-size: 14px;
+  color: var(--color-text-main);
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.refill-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.refill-add-btn {
+  flex: 1;
+  background-color: var(--color-butter);
+  border-color: #DEC876;
+  color: #4C3C0A;
+}
+
+.surplus-badge {
+  color: var(--color-sage-dark);
+  font-weight: 700;
+}
+
+.refill-dismiss-btn {
+  height: 36px;
+  padding: 0 14px;
+  font-size: 13px;
+}

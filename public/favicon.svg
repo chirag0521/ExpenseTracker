@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="16" fill="#FBF7F2"/>
+  <!-- Wallet / Notebook folder -->
+  <rect x="10" y="14" width="44" height="38" rx="8" fill="#FFFDF9" stroke="#EDE4D8" stroke-width="2"/>
+  <!-- Sage Pocket Flap -->
+  <path d="M 10 22 C 10 17, 14 14, 20 14 L 44 14 C 50 14, 54 17, 54 22 L 54 28 C 54 32, 40 38, 32 38 C 24 38, 10 32, 10 28 Z" fill="#A8C3A0"/>
+  <!-- Gentle stitched line -->
+  <path d="M 14 30 Q 32 37 50 30" stroke="#7A9C72" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+  <!-- Small metallic brass button -->
+  <circle cx="32" cy="33" r="3" fill="#F6E3A1" stroke="#D8C37A" stroke-width="1"/>
+  <!-- Rupee glyph subtle watermark -->
+  <text x="32" y="47" font-family="serif" font-size="9" font-weight="bold" fill="#8A7F74" text-anchor="middle">₹</text>
+</svg>

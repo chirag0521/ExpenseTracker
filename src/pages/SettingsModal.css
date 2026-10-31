@@ -1,0 +1,147 @@
+.settings-sheet {
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.settings-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.settings-section {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.setting-icon {
+  color: var(--color-text-secondary);
+}
+
+.setting-section-title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.setting-desc {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.target-setting-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.target-setting-box {
+  flex: 1;
+  height: 44px;
+}
+
+.target-input {
+  font-size: 20px;
+  height: 42px;
+}
+
+.target-save-btn {
+  height: 44px;
+  padding: 0 16px;
+}
+
+.export-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.export-btn {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0 14px;
+}
+
+.last-export-text {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.upload-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.storage-stats-card {
+  background-color: #FAF6EF;
+}
+
+.storage-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.count-pill {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 8px;
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-main);
+}
+
+.offline-note {
+  font-size: 11px;
+  color: var(--color-sage-dark);
+  font-weight: 500;
+}
+
+.danger-zone-card {
+  background-color: var(--color-dusty-rose-bg);
+  border-color: var(--color-dusty-rose-border);
+}
+
+.danger-icon,
+.danger-text {
+  color: var(--color-dusty-rose-dark);
+}
+
+.clear-data-btn {
+  width: 100%;
+  margin-top: 4px;
+}

@@ -1,0 +1,441 @@
+.reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reports-header {
+  margin-bottom: 2px;
+}
+
+.reports-title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.reports-sub {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* Month Switcher Bar */
+.month-switcher-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+
+.month-nav-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-main);
+  border-radius: var(--radius-btn);
+  transition: background-color 150ms ease;
+}
+
+.month-nav-btn:active {
+  background-color: var(--color-border-subtle);
+}
+
+.month-nav-btn.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.month-display {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.month-icon {
+  color: var(--color-text-secondary);
+}
+
+/* Comparison Sentence Banner */
+.comparison-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background-color: var(--color-peach-bg);
+  border-color: var(--color-peach);
+}
+
+.comparison-sparkle {
+  color: var(--color-peach-dark);
+  flex-shrink: 0;
+}
+
+.comparison-sentence {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-main);
+  line-height: 1.4;
+}
+
+/* Financial Ledger Summary */
+.summary-section {
+  padding: 16px;
+}
+
+.summary-ledger {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ledger-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.ledger-label {
+  color: var(--color-text-secondary);
+}
+
+.ledger-breakdown {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.ledger-val {
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.val-profit {
+  color: var(--color-sage-dark);
+}
+
+.val-loss {
+  color: var(--color-dusty-rose-dark);
+}
+
+.ledger-row-total {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ledger-closing-val {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.out-of-pocket-card {
+  margin-top: 10px;
+  background-color: #FAF6EF;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.out-of-pocket-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.out-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.out-sub {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.out-val {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-butter-dark);
+}
+
+/* Daily Chart Section */
+.daily-chart-section {
+  padding: 16px;
+}
+
+/* Category Breakdown */
+.category-breakdown-section {
+  padding: 16px;
+}
+
+.category-breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.category-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.category-item-row:hover,
+.category-item-row.row-selected {
+  background-color: #FAF6EF;
+}
+
+.category-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.category-name-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.category-item-pct {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.category-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.category-item-amount {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.category-change-badge {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+.badge-more {
+  background-color: var(--color-dusty-rose-bg);
+  color: var(--color-dusty-rose-dark);
+}
+
+.badge-less {
+  background-color: var(--color-sage-bg);
+  color: var(--color-sage-dark);
+}
+
+/* Averages Grid */
+.averages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.average-card {
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.avg-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+
+.avg-val {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.avg-sub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Top Expenses Section */
+.top-expenses-section {
+  padding: 16px;
+}
+
+.top-expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top-expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background-color: #FAF6EF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.top-expense-item:active {
+  transform: scale(0.98);
+}
+
+.top-expense-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-rank-badge {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  width: 22px;
+}
+
+.top-expense-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-expense-cat {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.top-expense-date {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.top-expense-amount {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+/* Monthly IPO Section */
+.monthly-ipos-section {
+  padding: 16px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-title-row .section-title {
+  margin-bottom: 0;
+}
+
+.ipo-total-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.ipo-total-badge.profit {
+  background-color: var(--color-sage-bg);
+  color: var(--color-sage-dark);
+}
+
+.ipo-total-badge.loss {
+  background-color: var(--color-dusty-rose-bg);
+  color: var(--color-dusty-rose-dark);
+}
+
+.monthly-ipos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.monthly-ipo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  background-color: #FAF6EF;
+  border-radius: 8px;
+}
+
+.ipo-item-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.ipo-company {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.ipo-date {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.ipo-amount {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ipo-amount.profit {
+  color: var(--color-sage-dark);
+}
+
+.ipo-amount.loss {
+  color: var(--color-dusty-rose-dark);
+}

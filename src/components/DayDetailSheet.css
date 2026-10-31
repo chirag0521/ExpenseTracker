@@ -1,0 +1,96 @@
+.day-detail-sheet {
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-sheet-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.day-sheet-date-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.day-sheet-date {
+  font-weight: 500;
+}
+
+.day-sheet-total {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.day-entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+
+.day-entry-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background-color: #FAF6EF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+
+.day-entry-item:active {
+  transform: scale(0.98);
+  background-color: var(--color-border-subtle);
+}
+
+.day-entry-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+.day-entry-note {
+  font-size: 13px;
+  color: var(--color-text-main);
+  margin-top: 2px;
+}
+
+.day-entry-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.day-entry-amount {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.day-entry-tap-hint {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.day-empty-state {
+  padding: 24px 0;
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
