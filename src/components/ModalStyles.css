@@ -64,7 +64,7 @@
 
 .amount-input-box:focus-within {
   border-color: var(--color-sage);
-  background-color: #172130;
+  background-color: #1D142A;
 }
 
 .currency-prefix {

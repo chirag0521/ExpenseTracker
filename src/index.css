@@ -1,55 +1,65 @@
 :root {
-  /* Dark Pastel Theme of Grey & Blue */
-  --color-canvas: #090D14;
-  --color-bg: #101622;
-  --color-card: #18202E;
-  --color-surface-subtle: #20293A;
-  --color-border: #28354A;
-  --color-border-subtle: #1D2636;
+  /* Twilight Plum & Pastel Lilac Theme */
+  /* Swatches: #541533 (Wine), #722548 (Plum Rose), #221932 (Slate Violet), #0B0407 (Obsidian), #775C88 (Mauve), #9682B9 (Pastel Lilac) */
+  --palette-wine: #541533;
+  --palette-plum: #722548;
+  --palette-slate-violet: #221932;
+  --palette-obsidian: #0B0407;
+  --palette-mauve: #775C88;
+  --palette-lilac: #9682B9;
+
+  /* Surfaces & Layout */
+  --color-canvas: #0B0407;
+  --color-bg: #140E1E;
+  --color-card: #221932;
+  --color-surface-subtle: #2C203E;
+  --color-border: #3A2A52;
+  --color-border-subtle: #2B1D3F;
   
-  --color-text-main: #EDF3F8;
-  --color-text-secondary: #94A3B8;
-  --color-text-muted: #627288;
+  /* Typography */
+  --color-text-main: #F7F1FA;
+  --color-text-secondary: #BAA9CB;
+  --color-text-muted: #806E94;
   
-  /* Primary Pastel Blue */
-  --color-sage: #6EA8D9;
-  --color-sage-dark: #96C4EC;
-  --color-sage-bg: rgba(110, 168, 217, 0.14);
-  --color-sage-border: rgba(110, 168, 217, 0.32);
+  /* Primary Accent: #9682B9 (Luminous Pastel Lilac) */
+  --color-sage: #9682B9;
+  --color-sage-dark: #BAA6DD;
+  --color-sage-bg: rgba(150, 130, 185, 0.16);
+  --color-sage-border: rgba(150, 130, 185, 0.35);
   
-  /* Pastel Ice / Powder Blue */
-  --color-powder: #88C0D0;
-  --color-powder-dark: #B5E2EE;
-  --color-powder-bg: rgba(136, 192, 208, 0.14);
-  --color-powder-border: rgba(136, 192, 208, 0.32);
+  /* Soft Lavender Blue */
+  --color-powder: #A393C4;
+  --color-powder-dark: #C6B9E2;
+  --color-powder-bg: rgba(163, 147, 196, 0.16);
+  --color-powder-border: rgba(163, 147, 196, 0.35);
   
-  /* Pastel Periwinkle / Slate Lavender */
-  --color-lavender: #9FA8DA;
-  --color-lavender-dark: #C5CAE9;
-  --color-lavender-bg: rgba(159, 168, 218, 0.14);
+  /* Dusty Mauve: #775C88 */
+  --color-lavender: #775C88;
+  --color-lavender-dark: #A58DB6;
+  --color-lavender-bg: rgba(119, 92, 136, 0.18);
   
-  /* Pastel Peach / Muted Coral */
-  --color-peach: #F0B27A;
-  --color-peach-dark: #FAD7A0;
-  --color-peach-bg: rgba(240, 178, 122, 0.14);
-  --color-peach-border: rgba(240, 178, 122, 0.32);
+  /* Muted Berry Plum: #722548 */
+  --color-peach: #C2597F;
+  --color-peach-dark: #E28AA8;
+  --color-peach-bg: rgba(114, 37, 72, 0.22);
+  --color-peach-border: rgba(194, 89, 127, 0.35);
   
-  /* Pastel Butter / Soft Amber */
-  --color-butter: #E5D88C;
-  --color-butter-dark: #FEFCBF;
-  --color-butter-bg: rgba(229, 216, 140, 0.14);
-  --color-butter-border: rgba(229, 216, 140, 0.3);
+  /* Soft Pastel Amber */
+  --color-butter: #E6C47A;
+  --color-butter-dark: #FBE6B1;
+  --color-butter-bg: rgba(230, 196, 122, 0.16);
+  --color-butter-border: rgba(230, 196, 122, 0.35);
   
-  /* Pastel Blush / Soft Mauve */
-  --color-blush: #E8A7B8;
-  --color-blush-dark: #FADBD8;
-  --color-blush-bg: rgba(232, 167, 184, 0.14);
+  /* Soft Blush / Mauve */
+  --color-blush: #D88AA5;
+  --color-blush-dark: #F5C6D6;
+  --color-blush-bg: rgba(216, 138, 165, 0.16);
   
-  /* Negative / Expenses (Soft Pastel Coral Rose) */
-  --color-dusty-rose: #F28B82;
-  --color-dusty-rose-bg: rgba(242, 139, 130, 0.14);
-  --color-dusty-rose-border: rgba(242, 139, 130, 0.3);
-  --color-dusty-rose-dark: #FFB4A9;
+  /* Negative / Expenses (Plum Coral: #722548 & #E26884) */
+  --color-dusty-rose: #E26884;
+  --color-dusty-rose-bg: rgba(114, 37, 72, 0.25);
+  --color-dusty-rose-border: rgba(226, 104, 132, 0.35);
+  --color-dusty-rose-dark: #FFA6B9;
 
   /* Typography */
   --font-serif: 'Fraunces', Georgia, serif;
@@ -64,9 +74,9 @@
   /* Tap Targets */
   --min-tap-target: 44px;
   
-  /* Depth shadows */
-  --shadow-subtle: 0 4px 14px rgba(0, 0, 0, 0.3);
-  --shadow-float: 0 8px 28px rgba(0, 0, 0, 0.45);
+  /* Atmospheric shadows */
+  --shadow-subtle: 0 4px 16px rgba(11, 4, 7, 0.4);
+  --shadow-float: 0 8px 30px rgba(11, 4, 7, 0.65);
 }
 
 * {
@@ -109,7 +119,7 @@ html, body {
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 440px) {
@@ -130,7 +140,7 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Soft paper notebook card */
+/* Notebook paper card */
 .paper-card {
   background-color: var(--color-card);
   border: 1px solid var(--color-border);
@@ -173,7 +183,7 @@ html, body {
 .btn-primary {
   background-color: var(--color-sage);
   border-color: var(--color-sage-border);
-  color: #0A121E;
+  color: #120A1C;
   font-weight: 600;
 }
 
@@ -200,7 +210,7 @@ html, body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(6, 10, 16, 0.72);
+  background-color: rgba(11, 4, 7, 0.78);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: flex-end;
@@ -219,7 +229,7 @@ html, body {
   padding: 20px 20px calc(24px + env(safe-area-inset-bottom)) 20px;
   max-height: 85vh;
   overflow-y: auto;
-  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 -8px 36px rgba(0, 0, 0, 0.7);
   animation: slideUp 200ms ease;
 }
 
@@ -259,7 +269,7 @@ html, body {
 
 .input-field:focus {
   border-color: var(--color-sage);
-  background-color: #172130;
+  background-color: #211633;
 }
 
 /* Color schemes for native date input on dark mode */
@@ -268,7 +278,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-/* Custom subtle scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
 }

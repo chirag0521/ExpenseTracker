@@ -1,78 +1,78 @@
 /**
- * Categories configuration with distinct dark pastel colors and icons
+ * Categories configuration tailored for the Twilight Plum & Pastel Lilac palette
  */
 
 export const CATEGORIES = [
   {
     id: 'Food',
     label: 'Food',
-    bg: 'rgba(240, 178, 122, 0.14)',
-    border: 'rgba(240, 178, 122, 0.35)',
-    text: '#FAD7A0',
-    chartColor: '#F0B27A',
+    bg: 'rgba(114, 37, 72, 0.22)',
+    border: 'rgba(194, 89, 127, 0.45)',
+    text: '#F5BACD',
+    chartColor: '#C2597F',
     iconName: 'Utensils'
   },
   {
     id: 'Travel',
     label: 'Travel',
-    bg: 'rgba(126, 178, 221, 0.14)',
-    border: 'rgba(126, 178, 221, 0.35)',
-    text: '#BAE0F7',
-    chartColor: '#7EB2DD',
+    bg: 'rgba(150, 130, 185, 0.22)',
+    border: 'rgba(150, 130, 185, 0.45)',
+    text: '#E5DCF2',
+    chartColor: '#9682B9',
     iconName: 'Car'
   },
   {
     id: 'Recharge/Bills',
     label: 'Recharge/Bills',
-    bg: 'rgba(229, 216, 140, 0.14)',
-    border: 'rgba(229, 216, 140, 0.35)',
-    text: '#FEFCBF',
-    chartColor: '#E5D88C',
+    bg: 'rgba(230, 196, 122, 0.18)',
+    border: 'rgba(230, 196, 122, 0.4)',
+    text: '#FBE6B1',
+    chartColor: '#E6C47A',
     iconName: 'Receipt'
   },
   {
     id: 'Shopping',
     label: 'Shopping',
-    bg: 'rgba(232, 167, 184, 0.14)',
-    border: 'rgba(232, 167, 184, 0.35)',
-    text: '#FCE4EC',
-    chartColor: '#E8A7B8',
+    bg: 'rgba(168, 59, 106, 0.22)',
+    border: 'rgba(168, 59, 106, 0.45)',
+    text: '#FAD1E1',
+    chartColor: '#A83B6A',
     iconName: 'ShoppingBag'
   },
   {
     id: 'Health',
     label: 'Health',
-    bg: 'rgba(118, 215, 196, 0.14)',
-    border: 'rgba(118, 215, 196, 0.35)',
-    text: '#A3E4D7',
-    chartColor: '#76D7C4',
+    bg: 'rgba(110, 207, 168, 0.18)',
+    border: 'rgba(110, 207, 168, 0.4)',
+    text: '#B6EED7',
+    chartColor: '#6ECFA8',
     iconName: 'HeartPulse'
   },
   {
     id: 'Entertainment',
     label: 'Entertainment',
-    bg: 'rgba(159, 168, 218, 0.14)',
-    border: 'rgba(159, 168, 218, 0.35)',
-    text: '#C5CAE9',
-    chartColor: '#9FA8DA',
+    bg: 'rgba(180, 151, 223, 0.22)',
+    border: 'rgba(180, 151, 223, 0.45)',
+    text: '#EDE3FC',
+    chartColor: '#B497DF',
     iconName: 'Sparkles'
   },
   {
     id: 'Rent',
     label: 'Rent',
-    bg: 'rgba(133, 146, 158, 0.14)',
-    border: 'rgba(133, 146, 158, 0.35)',
-    text: '#D5D8DC',
-    chartColor: '#85929E',
+    bg: 'rgba(119, 92, 136, 0.22)',
+    border: 'rgba(119, 92, 136, 0.45)',
+    text: '#D7C7E4',
+    chartColor: '#775C88',
     iconName: 'Home'
   },
   {
     id: 'Other',
     label: 'Other',
-    bg: 'rgba(174, 182, 191, 0.14)',
-    border: 'rgba(174, 182, 191, 0.35)',
-    text: '#EAEDED',
-    chartColor: '#AEB6BF',
+    bg: 'rgba(154, 145, 168, 0.18)',
+    border: 'rgba(154, 145, 168, 0.4)',
+    text: '#EFEBF4',
+    chartColor: '#9A91A8',
     iconName: 'MoreHorizontal'
   }
 ];
@@ -87,10 +87,10 @@ export function getCategoryConfig(id) {
     CATEGORY_MAP[id] || {
       id,
       label: id || 'Other',
-      bg: 'rgba(174, 182, 191, 0.14)',
-      border: 'rgba(174, 182, 191, 0.35)',
-      text: '#EAEDED',
-      chartColor: '#AEB6BF',
+      bg: 'rgba(154, 145, 168, 0.18)',
+      border: 'rgba(154, 145, 168, 0.4)',
+      text: '#EFEBF4',
+      chartColor: '#9A91A8',
       iconName: 'MoreHorizontal'
     }
   );

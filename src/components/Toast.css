@@ -20,7 +20,7 @@
 }
 
 .toast-container.success {
-  background-color: #172436;
+  background-color: var(--color-surface-subtle);
   border-color: var(--color-sage-border);
 }
 
