@@ -16,6 +16,28 @@
   flex-direction: column;
 }
 
+.brand-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-rupee-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #2B1E3E 0%, #181024 100%);
+  border: 1px solid rgba(186, 166, 221, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .brand-badge {
   font-family: var(--font-serif);
   font-size: 18px;
@@ -258,11 +280,17 @@
   cursor: pointer;
   color: var(--color-text-secondary);
   border-radius: var(--radius-btn);
-  transition: background-color 150ms ease;
+  transition: background-color 150ms ease, opacity 150ms ease;
 }
 
-.date-nav-btn:active {
+.date-nav-btn:active:not(:disabled) {
   background-color: var(--color-border-subtle);
+}
+
+.date-nav-btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .date-nav-center {

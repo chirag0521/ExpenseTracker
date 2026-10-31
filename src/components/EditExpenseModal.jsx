@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Trash2 } from 'lucide-react';
 import { CATEGORIES } from '../utils/categories.js';
+import { getTodayKolkata } from '../utils/date.js';
 import CategoryChip from './CategoryChip.jsx';
 import ConfirmModal from './ConfirmModal.jsx';
 import './ModalStyles.css';
@@ -110,7 +111,12 @@ export default function EditExpenseModal({
                 type="date"
                 className="input-field"
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
+                max={getTodayKolkata()}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  const maxVal = getTodayKolkata();
+                  setDate(val > maxVal ? maxVal : val);
+                }}
               />
             </div>
 

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Settings as SettingsIcon,
   Plus,
@@ -7,7 +7,6 @@ import {
   ChevronRight,
   Calendar,
   Sparkles,
-  TrendingUp,
   CreditCard
 } from 'lucide-react';
 import { formatINR } from '../utils/calc.js';
@@ -51,6 +50,13 @@ export default function TodayPage({
   // Selected date for viewing expenses (defaults to today)
   const [selectedDate, setSelectedDate] = useState(todayStr);
 
+  // Keep selectedDate clamped so it never exceeds todayStr
+  useEffect(() => {
+    if (selectedDate && todayStr && selectedDate > todayStr) {
+      setSelectedDate(todayStr);
+    }
+  }, [selectedDate, todayStr]);
+
   // Modals state
   const [showAddMoney, setShowAddMoney] = useState(false);
   const [showEditTarget, setShowEditTarget] = useState(false);
@@ -88,7 +94,7 @@ export default function TodayPage({
     return Math.max(0, Math.min(100, pct));
   }, [balance, settings.target]);
 
-  const isViewingToday = selectedDate === todayStr;
+  const isViewingToday = !selectedDate || selectedDate >= todayStr;
   const remainingDays = useMemo(() => getRemainingDaysInMonth(todayStr), [todayStr]);
 
   return (
@@ -96,7 +102,10 @@ export default function TodayPage({
       {/* Top Header Bar */}
       <header className="home-header">
         <div className="brand-group">
-          <span className="brand-badge">Pocket Wallet</span>
+          <div className="brand-title-row">
+            <span className="brand-rupee-logo" aria-hidden="true">₹</span>
+            <span className="brand-badge">Pocket Wallet</span>
+          </div>
           <span className="brand-date">{formatDisplayDate(todayStr)}</span>
         </div>
         <button
@@ -240,8 +249,15 @@ export default function TodayPage({
           <button
             type="button"
             className="date-nav-btn"
-            onClick={() => setSelectedDate((prev) => shiftDate(prev, 1))}
+            onClick={() => {
+              setSelectedDate((prev) => {
+                const nextDate = shiftDate(prev, 1);
+                return nextDate > todayStr ? todayStr : nextDate;
+              });
+            }}
+            disabled={isViewingToday}
             aria-label="Next Day"
+            title={isViewingToday ? 'Cannot navigate past today' : 'Next Day'}
           >
             <ChevronRight size={20} />
           </button>

@@ -48,8 +48,14 @@
   cursor: pointer;
   border-radius: 6px;
   padding: 4px 0 2px 0;
-  transition: background-color 150ms ease, transform 150ms ease;
+  transition: background-color 150ms ease, transform 150ms ease, opacity 150ms ease;
   user-select: none;
+}
+
+.bar-day-column.is-future {
+  opacity: 0.25;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .bar-day-column:active {

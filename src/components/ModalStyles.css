@@ -59,12 +59,16 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-input);
   padding: 0 14px;
-  transition: border-color 150ms ease, background-color 150ms ease;
+  height: 52px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
 }
 
 .amount-input-box:focus-within {
   border-color: var(--color-sage);
   background-color: #1D142A;
+  box-shadow: 0 0 0 2px var(--color-sage-bg);
 }
 
 .currency-prefix {
@@ -73,21 +77,32 @@
   font-weight: 600;
   color: var(--color-text-secondary);
   margin-right: 6px;
+  flex-shrink: 0;
+  user-select: none;
 }
 
 .amount-field {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
   border: none;
+  outline: none;
+  box-shadow: none;
   background: transparent;
   padding: 0;
-  height: 50px;
   font-family: var(--font-serif);
   font-size: 24px;
   font-weight: 700;
   color: var(--color-text-main);
+  box-sizing: border-box;
 }
 
-.amount-field:focus {
+.amount-field:focus,
+.amount-field:focus-visible {
   border: none;
+  outline: none !important;
+  box-shadow: none !important;
   background: transparent;
 }
 

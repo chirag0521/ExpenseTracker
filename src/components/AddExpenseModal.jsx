@@ -103,7 +103,10 @@ export default function AddExpenseModal({
             <label className="form-label" htmlFor="modal-expense-amount">
               Amount Spent
             </label>
-            <div className="amount-input-box modal-amount-hero">
+            <div
+              className="amount-input-box modal-amount-hero"
+              onClick={() => amountInputRef.current?.focus()}
+            >
               <span className="currency-prefix">₹</span>
               <input
                 id="modal-expense-amount"
@@ -179,7 +182,12 @@ export default function AddExpenseModal({
                 type="date"
                 className="input-field"
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
+                max={todayStr || getTodayKolkata()}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  const maxVal = todayStr || getTodayKolkata();
+                  setDate(val > maxVal ? maxVal : val);
+                }}
               />
             </div>
 

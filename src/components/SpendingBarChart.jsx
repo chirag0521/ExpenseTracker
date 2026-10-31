@@ -55,6 +55,7 @@ export default function SpendingBarChart({
             const isToday = todayStr === item.date;
             const isSelected = selectedDay && selectedDay.date === item.date;
             const hasSpending = item.amount > 0;
+            const isFuture = Boolean(todayStr && item.date > todayStr);
 
             // Scaled bar height between 4px (if spending) and 80px
             const barHeight = hasSpending
@@ -69,15 +70,21 @@ export default function SpendingBarChart({
                 data-day={item.day}
                 className={`bar-day-column ${hasSpending ? 'has-spend' : ''} ${
                   isToday ? 'is-today' : ''
-                } ${isSelected ? 'is-selected' : ''}`}
+                } ${isSelected ? 'is-selected' : ''} ${isFuture ? 'is-future' : ''}`}
                 onClick={() => {
+                  if (isFuture) return;
                   if (onSelectDay) {
                     onSelectDay(item);
                   }
                 }}
                 role="button"
-                tabIndex={0}
-                aria-label={`Day ${item.day}: ${formatINR(item.amount)} (${item.count} items)`}
+                tabIndex={isFuture ? -1 : 0}
+                aria-disabled={isFuture}
+                aria-label={
+                  isFuture
+                    ? `Day ${item.day} (Upcoming)`
+                    : `Day ${item.day}: ${formatINR(item.amount)} (${item.count} items)`
+                }
               >
                 {/* Bar representation */}
                 <div

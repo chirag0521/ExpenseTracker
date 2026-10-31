@@ -1,13 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="16" fill="#FBF7F2"/>
-  <!-- Wallet / Notebook folder -->
-  <rect x="10" y="14" width="44" height="38" rx="8" fill="#FFFDF9" stroke="#EDE4D8" stroke-width="2"/>
-  <!-- Sage Pocket Flap -->
-  <path d="M 10 22 C 10 17, 14 14, 20 14 L 44 14 C 50 14, 54 17, 54 22 L 54 28 C 54 32, 40 38, 32 38 C 24 38, 10 32, 10 28 Z" fill="#A8C3A0"/>
-  <!-- Gentle stitched line -->
-  <path d="M 14 30 Q 32 37 50 30" stroke="#7A9C72" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
-  <!-- Small metallic brass button -->
-  <circle cx="32" cy="33" r="3" fill="#F6E3A1" stroke="#D8C37A" stroke-width="1"/>
-  <!-- Rupee glyph subtle watermark -->
-  <text x="32" y="47" font-family="serif" font-size="9" font-weight="bold" fill="#8A7F74" text-anchor="middle">₹</text>
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#201630" />
+      <stop offset="100%" stop-color="#0C0612" />
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2B1E3E" />
+      <stop offset="100%" stop-color="#181024" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BAA6DD" />
+      <stop offset="60%" stop-color="#9682B9" />
+      <stop offset="100%" stop-color="#722548" />
+    </linearGradient>
+    <linearGradient id="rupeeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#F4EEFB" />
+      <stop offset="100%" stop-color="#BAA6DD" />
+    </linearGradient>
+    <radialGradient id="auraGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9682B9" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#9682B9" stop-opacity="0" />
+    </radialGradient>
+    <filter id="favShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Squircle Base for crisp tab display -->
+  <rect width="64" height="64" rx="16" fill="url(#favBg)" />
+
+  <!-- Circular Badge with Lilac Accent Rim -->
+  <circle cx="32" cy="32" r="23.5" fill="url(#badgeGrad)" stroke="url(#ringGrad)" stroke-width="1.5" />
+
+  <!-- Inner Plum Ring -->
+  <circle cx="32" cy="32" r="21.5" fill="none" stroke="#722548" stroke-width="0.6" stroke-opacity="0.6" />
+
+  <!-- Ambient Glow -->
+  <circle cx="32" cy="32" r="16" fill="url(#auraGlow)" />
+
+  <!-- Rupee Symbol -->
+  <path d="M19.44 27.15V22.14H31.39Q30.86 20.15 29.36 19.08Q27.87 18.01 25.27 18.01H19.44V13.00H44.56V18.01H38.09L38.04 18.17Q39.58 20.13 40.00 22.14H44.56V27.15H39.90Q39.05 30.38 36.43 32.57Q33.80 34.76 29.40 35.37L29.32 35.52L41.01 51.00H31.13L19.44 35.42V31.47H24.34Q27.28 31.47 28.97 30.26Q30.65 29.06 31.26 27.15Z" fill="url(#rupeeGrad)" filter="url(#favShadow)" />
 </svg>
