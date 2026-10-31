@@ -1,3 +1,36 @@
+@font-face {
+  font-family: 'Mocha Mochi';
+  src: url('./assets/fonts/MochaMochi.woff2') format('woff2'),
+       url('./assets/fonts/MochaMochi.woff') format('woff'),
+       url('./assets/fonts/MochaMochi.ttf') format('truetype'),
+       url('./assets/fonts/MochaMochi.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mocha Mochi';
+  src: url('./assets/fonts/MochaMochi.woff2') format('woff2'),
+       url('./assets/fonts/MochaMochi.woff') format('woff'),
+       url('./assets/fonts/MochaMochi.ttf') format('truetype'),
+       url('./assets/fonts/MochaMochi.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mocha Mochi';
+  src: url('./assets/fonts/MochaMochi.woff2') format('woff2'),
+       url('./assets/fonts/MochaMochi.woff') format('woff'),
+       url('./assets/fonts/MochaMochi.ttf') format('truetype'),
+       url('./assets/fonts/MochaMochi.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Twilight Plum & Pastel Lilac Theme */
   /* Swatches: #541533 (Wine), #722548 (Plum Rose), #221932 (Slate Violet), #0B0407 (Obsidian), #775C88 (Mauve), #9682B9 (Pastel Lilac) */
@@ -61,8 +94,9 @@
   --color-dusty-rose-border: rgba(226, 104, 132, 0.35);
   --color-dusty-rose-dark: #FFA6B9;
 
-  /* Typography */
-  --font-serif: 'Fraunces', Georgia, serif;
+  /* Typography: Mocha Mochi Fat Fancy Display Font & DM Sans Body */
+  --font-display: 'Mocha Mochi', 'Fraunces', cursive, sans-serif;
+  --font-serif: var(--font-display);
   --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   
   /* Geometry & Radii */
