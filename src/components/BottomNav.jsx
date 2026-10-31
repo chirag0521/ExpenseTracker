@@ -2,7 +2,7 @@ import React from 'react';
 import { Sun, Plus, BarChart3, TrendingUp } from 'lucide-react';
 import './BottomNav.css';
 
-export default function BottomNav({ activeTab, onTabChange }) {
+export default function BottomNav({ activeTab, onTabChange, onOpenAdd }) {
   return (
     <nav className="bottom-nav" aria-label="Main Navigation">
       <div className="bottom-nav-inner">
@@ -19,11 +19,11 @@ export default function BottomNav({ activeTab, onTabChange }) {
           <span className="nav-label">Today</span>
         </button>
 
-        {/* Add Tab (Slightly raised sage circle) */}
+        {/* Add Modal Trigger Button (Center Raised Sage Circle) */}
         <button
           type="button"
-          className={`nav-add-btn ${activeTab === 'add' ? 'active' : ''}`}
-          onClick={() => onTabChange('add')}
+          className="nav-add-btn"
+          onClick={onOpenAdd}
           aria-label="Add Expense"
         >
           <span className="add-circle">
@@ -61,3 +61,4 @@ export default function BottomNav({ activeTab, onTabChange }) {
     </nav>
   );
 }
+

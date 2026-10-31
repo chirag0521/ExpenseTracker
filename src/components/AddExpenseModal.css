@@ -1,0 +1,81 @@
+.add-expense-sheet {
+  max-height: 90vh;
+  overflow-y: auto;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+.modal-subtitle {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  display: block;
+  margin-top: 2px;
+}
+
+.modal-amount-hero {
+  height: 58px;
+  background-color: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.modal-amount-hero .currency-prefix {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.modal-amount-hero .amount-field {
+  font-size: 28px;
+  height: 56px;
+}
+
+.quick-amount-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.quick-amount-btn {
+  flex: 1;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.quick-amount-btn:hover {
+  background-color: var(--color-peach-bg);
+  border-color: var(--color-peach-border);
+  color: var(--color-peach-dark);
+}
+
+.quick-amount-btn:active {
+  transform: scale(0.96);
+}
+
+.add-category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 140px;
+  overflow-y: auto;
+  padding: 4px 1px;
+}
+
+.add-meta-grid {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 380px) {
+  .add-meta-grid {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

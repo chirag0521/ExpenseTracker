@@ -29,7 +29,7 @@ export default function TodayPage({
   walletData,
   onOpenSettings,
   onQuickExport,
-  onNavigateAdd
+  onOpenAddExpense
 }) {
   const {
     balance,
@@ -258,7 +258,7 @@ export default function TodayPage({
                 <button
                   type="button"
                   className="btn btn-primary empty-add-btn"
-                  onClick={onNavigateAdd}
+                  onClick={onOpenAddExpense}
                 >
                   <Plus size={16} /> Add what you spent
                 </button>

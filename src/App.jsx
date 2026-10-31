@@ -6,9 +6,9 @@ import { exportDataAsJson } from './utils/exportImport.js';
 import BottomNav from './components/BottomNav.jsx';
 import PwaUpdatePrompt from './components/PwaUpdatePrompt.jsx';
 import OpeningBalanceModal from './components/OpeningBalanceModal.jsx';
+import AddExpenseModal from './components/AddExpenseModal.jsx';
 
 import TodayPage from './pages/TodayPage.jsx';
-import AddExpensePage from './pages/AddExpensePage.jsx';
 import ReportsPage from './pages/ReportsPage.jsx';
 import IpoPage from './pages/IpoPage.jsx';
 import SettingsModal from './pages/SettingsModal.jsx';
@@ -39,6 +39,7 @@ export default function App() {
 
   const [activeTab, setActiveTab] = useState('today');
   const [showSettings, setShowSettings] = useState(false);
+  const [showAddExpense, setShowAddExpense] = useState(false);
 
   // Quick export handler (used from backup reminder banner or settings)
   const handleQuickExport = async () => {
@@ -73,17 +74,7 @@ export default function App() {
             walletData={walletData}
             onOpenSettings={() => setShowSettings(true)}
             onQuickExport={handleQuickExport}
-            onNavigateAdd={() => setActiveTab('add')}
-          />
-        )}
-
-        {activeTab === 'add' && (
-          <AddExpensePage
-            onAddExpense={async (item) => {
-              await addExpense(item);
-              refreshData();
-            }}
-            todayStr={walletData.todayStr}
+            onOpenAddExpense={() => setShowAddExpense(true)}
           />
         )}
 
@@ -125,8 +116,23 @@ export default function App() {
         )}
       </main>
 
-      {/* Bottom Navigation: Today, Add, Reports, IPO */}
-      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
+      {/* Bottom Navigation: Today, Add (Action Modal Trigger), Reports, IPO */}
+      <BottomNav
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+        onOpenAdd={() => setShowAddExpense(true)}
+      />
+
+      {/* Add Expense Modal Popup */}
+      <AddExpenseModal
+        isOpen={showAddExpense}
+        onClose={() => setShowAddExpense(false)}
+        onAddExpense={async (item) => {
+          await addExpense(item);
+          refreshData();
+        }}
+        todayStr={walletData.todayStr}
+      />
 
       {/* First Launch Modal (Asking for Opening Balance) */}
       <OpeningBalanceModal
