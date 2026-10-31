@@ -165,21 +165,21 @@ export default function TodayPage({
           </div>
         </div>
 
-        {/* Action Buttons: Add Money & Edit Target */}
+        {/* Action Buttons: Add Expense & Add Money */}
         <div className="wallet-hero-actions">
           <button
             type="button"
             className="btn btn-primary wallet-action-btn"
-            onClick={() => setShowAddMoney(true)}
+            onClick={onOpenAddExpense}
           >
-            <Plus size={16} strokeWidth={2.4} /> Add Money
+            <Plus size={16} strokeWidth={2.4} /> Add Expense
           </button>
           <button
             type="button"
             className="btn btn-secondary wallet-action-btn"
-            onClick={() => setShowEditTarget(true)}
+            onClick={() => setShowAddMoney(true)}
           >
-            <Target size={16} strokeWidth={2.2} /> Edit Target
+            <CreditCard size={16} strokeWidth={2.2} /> Top Up
           </button>
         </div>
       </section>

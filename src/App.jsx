@@ -116,11 +116,10 @@ export default function App() {
         )}
       </main>
 
-      {/* Bottom Navigation: Today, Add (Action Modal Trigger), Reports, IPO */}
+      {/* Bottom Navigation: Today, Reports, IPO */}
       <BottomNav
         activeTab={activeTab}
         onTabChange={setActiveTab}
-        onOpenAdd={() => setShowAddExpense(true)}
       />
 
       {/* Add Expense Modal Popup */}
