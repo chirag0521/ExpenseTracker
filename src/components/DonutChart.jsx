@@ -113,7 +113,7 @@ export default function DonutChart({
               key={slice.category}
               d={slice.pathData}
               fill={slice.color}
-              stroke="#FFFDF9"
+              stroke="var(--color-card)"
               strokeWidth="2"
               className={`donut-slice ${slice.isSelected ? 'slice-active' : ''}`}
               onClick={() => {

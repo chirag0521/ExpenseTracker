@@ -105,7 +105,7 @@
 }
 
 .storage-stats-card {
-  background-color: #FAF6EF;
+  background-color: var(--color-surface-subtle);
 }
 
 .storage-counts {

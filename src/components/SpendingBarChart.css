@@ -61,7 +61,7 @@
 }
 
 .bar-day-column.is-selected {
-  background-color: var(--color-peach-bg);
+  background-color: var(--color-sage-bg);
 }
 
 .bar-container {
@@ -83,7 +83,7 @@
 
 .bar-fill.bar-high {
   background-color: var(--color-peach);
-  border-color: #E8B99D;
+  border-color: var(--color-peach-border);
 }
 
 .bar-val-tooltip {
@@ -114,10 +114,10 @@
 
 .bar-day-column.is-today .day-number {
   background-color: var(--color-sage);
-  color: #243E1F;
+  color: #0A121E;
   font-weight: 700;
   border-radius: 4px;
-  padding: 2px 3px;
+  padding: 2px 4px;
 }
 
 .bar-chart-empty {

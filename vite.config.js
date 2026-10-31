@@ -13,8 +13,8 @@ export default defineConfig({
         name: 'Pocket Wallet - Daily Budget Tracker',
         short_name: 'PocketWallet',
         description: 'Mobile-first personal monthly wallet and budget tracker',
-        theme_color: '#FBF7F2',
-        background_color: '#FBF7F2',
+        theme_color: '#101622',
+        background_color: '#101622',
         display: 'standalone',
         orientation: 'portrait',
         icons: [

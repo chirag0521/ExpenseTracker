@@ -142,7 +142,7 @@
 
 .out-of-pocket-card {
   margin-top: 10px;
-  background-color: #FAF6EF;
+  background-color: var(--color-surface-subtle);
   border-radius: 8px;
   padding: 10px 12px;
   display: flex;
@@ -202,7 +202,7 @@
 
 .category-item-row:hover,
 .category-item-row.row-selected {
-  background-color: #FAF6EF;
+  background-color: var(--color-surface-subtle);
 }
 
 .category-item-left {
@@ -315,7 +315,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 10px;
-  background-color: #FAF6EF;
+  background-color: var(--color-surface-subtle);
   border-radius: 8px;
   cursor: pointer;
   transition: transform 150ms ease;
@@ -406,7 +406,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 10px;
-  background-color: #FAF6EF;
+  background-color: var(--color-surface-subtle);
   border-radius: 8px;
 }
 

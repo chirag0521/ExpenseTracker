@@ -11,7 +11,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: #FFFDF9;
+  background-color: var(--color-card);
   border: 1px solid var(--color-butter-border);
   border-radius: var(--radius-pill);
   padding: 3px 10px;
@@ -37,8 +37,9 @@
 .refill-add-btn {
   flex: 1;
   background-color: var(--color-butter);
-  border-color: #DEC876;
-  color: #4C3C0A;
+  border-color: var(--color-butter-border);
+  color: #0A121E;
+  font-weight: 600;
 }
 
 .surplus-badge {

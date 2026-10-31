@@ -18,7 +18,7 @@
 }
 
 .category-chip.selected {
-  box-shadow: 0 2px 6px rgba(74, 66, 59, 0.06);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .category-chip.small {
